@@ -1,0 +1,269 @@
+
+/* body style edits */
+body{
+    background-color: #FFFFFF;
+}
+
+
+/* header style edits */
+h1 {
+    margin: 16x 0;
+    font-size: 24px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    text-align: center;
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 15px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: white;
+    font-size: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Spread the links out evenly */
+}
+
+nav li {
+    margin: 10px;
+}
+
+
+/* navigation edits */
+
+/* nav >a is a child selector */
+nav a {
+    text-decoration: none;  /* Remove the underline from links */
+    color: rgb(0, 0, 0);           
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;  /* Underline the links when hovered */
+}
+
+
+p, figcaption{   
+    display: block; 
+    font-family: Georgia, Times, "Times New Roman", serif;  
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 10px;
+    overflow: hidden;
+}
+
+
+img {
+    border: 5px solid #f506c1; 
+    padding: 10px;
+    margin: 20px auto;
+    border-top-right-radius: 30px;
+    width: 50%;  
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+
+}
+
+figure {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    border-top-right-radius: 30px;
+}
+
+
+
+li {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    color: black;
+}
+
+
+
+a{
+    text-decoration: underline;
+    text-transform: uppercase;
+    padding: 5px;
+    border: #FFFFFF;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+
+
+.gif{
+    display: none;
+}
+
+.skip {
+    color: black;
+    position: absolute;
+    margin-top: -100px;
+}
+:focus {
+    background-color: rgb(0, 0, 0);
+}
+.skip:focus{
+    position: absolute;
+    left: -500px;
+}
+
+div {
+    display:grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+
+}
+
+span {
+    margin: 10px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 1.2em;  
+}
+
+ul > li {
+    display: block;
+    text-align: center;
+    margin: 10px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 1.2em;
+    color: black;
+}
+
+ol > li {
+    margin: 10px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 1.2em;
+    color: black;
+}
+
+nav > ul > li {
+    display: inline-block;
+    margin: 20px;
+    font-size: 30px;
+}
+
+.location {
+    background-color: rgb(251, 0, 142);
+    border: black 3px solid;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+
+}
+
+.pet-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.pet-img {
+    grid-column: 1/3;
+}
+
+.recipe-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.recipe-img {
+    grid-column: 1/3;
+}
+
+.travel-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;  
+}
+
+.travel-img {
+    grid-column: 1/3;
+}
+    
+
+
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .gif {
+        display: none;
+    }
+    .static {
+        display: block;
+    }
+    .animated-element1, .animated-element2, .transition-element1, .transition-element2 {
+        animation: none;
+        transition: none;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    nav {
+        display: block;
+    }
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+        
+
+    }
+    .recipe-gallery {
+        padding-left: 20px;
+        list-style-type: disc;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .pet-gallery img {
+        width: calc(50% - 10px);
+    }
+
+    nav li {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+
+    main {
+        padding: 15px;
+    }
+    h1, h2, h3, p, figcaption, li, span, a {
+        font-size: 90%; /* Adjust text size for smaller screens */
+    }
+}
+
